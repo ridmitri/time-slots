@@ -1,0 +1,21 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:js-app",
+    "group:definitelyTyped",
+    "group:jsUnitTest",
+    "group:linters"
+  ],
+  "timezone": "Europe/Berlin",
+  "schedule": ["after 5:00pm on Friday"],
+  "packageRules": [
+    {
+      "updateTypes": ["minor", "patch"],
+      "automerge": true
+    },
+    {
+      "matchPackagePatterns": ["react", "react-dom"],
+      "groupName": "react"
+    }
+  ]
+}
