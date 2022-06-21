@@ -1,47 +1,50 @@
-import { useState } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+
+const Bold = styled.div`
+  font-weight: 700;
+  font-family: 'Roboto';
+`;
+
+const Regular = styled.div`
+  font-weight: 400; ;
+`;
+
+const Medium = styled.div`
+  font-weight: 500;
+`;
+
+const Light = styled.div`
+  font-weight: 300;
+  font-size: ${(props) => props.theme.fontSize.xl};
+  color: ${(props) => props.theme.color.green};
+`;
+
+const Container = styled.div`
+  text-align: center;
+`;
+
+const Header = styled.header`
+  background-color: ${(props) => props.theme.color.black};
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: ${(props) => props.theme.color.white}; ;
+`;
 
 function App() {
-  const [count, setCount] = useState(0);
+  const title = 'Example';
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button
-            type="button"
-            onClick={() => setCount((localCount) => localCount + 1)}
-          >
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+    <Container>
+      <Header>
+        <Bold>{title}</Bold>
+        <Medium>{title}</Medium>
+        <Regular>{title}</Regular>
+        <Light>{title}</Light>
+      </Header>
+    </Container>
   );
 }
 
