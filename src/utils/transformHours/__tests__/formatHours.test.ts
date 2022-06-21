@@ -57,7 +57,7 @@ describe('formatHours', () => {
       },
       {
         type: 'close',
-        value: 23 * H,
+        value: 23.99 * H,
       },
     ] as OpeningHours[];
 
