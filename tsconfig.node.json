@@ -3,6 +3,7 @@
     "composite": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
     "types": ["vitest/globals"]
   },
   "include": ["vite.config.ts"]

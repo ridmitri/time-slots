@@ -1,3 +1,5 @@
+import { css } from 'styled-components';
+
 const theme = {
   fontSize: {
     s: '12px',
@@ -13,6 +15,29 @@ const theme = {
     gray_2: '#eee',
     gray_3: '#a1a2a4',
   },
+};
+
+const bold = css`
+  font-weight: 700;
+`;
+
+const regular = css`
+  font-weight: 400;
+`;
+
+const medium = css`
+  font-weight: 500;
+`;
+
+const light = css`
+  font-weight: 300;
+`;
+
+export const font = {
+  bold,
+  regular,
+  medium,
+  light,
 };
 
 export default theme;
