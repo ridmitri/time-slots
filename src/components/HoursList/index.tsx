@@ -13,11 +13,8 @@ import {
 } from './styled';
 import payload from './payload';
 
-const TODAY = new Date().getUTCDay();
-
 export default function HoursList() {
   const hoursPayload = tranformHours(payload);
-  console.log('TODAY', TODAY);
 
   return (
     <Container>
