@@ -8,7 +8,7 @@ export const secondsToHours = (seconds: number) => {
   return Math.floor(hours);
 };
 
-const DAYS = [
+export const DAYS = [
   'monday',
   'tuesday',
   'wednesday',
@@ -18,7 +18,7 @@ const DAYS = [
   'sunday',
 ] as const;
 
-type DayOfWeek = typeof DAYS[number];
+export type DayOfWeek = typeof DAYS[number];
 
 export type OpeningHours = {
   type: 'open' | 'close';

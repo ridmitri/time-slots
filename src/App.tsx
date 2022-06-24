@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import AccessTimeIcon from 'components/Icon/AccessTime';
 import { font } from 'components/theme';
+import HoursList from 'components/HoursList';
 
 const Container = styled.div`
   text-align: center;
@@ -9,6 +10,8 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   background-color: ${(props) => props.theme.color.black};
+  color: ${(props) => props.theme.color.white};
+  flex-direction: column;
 `;
 
 const Title = styled.h1`
@@ -26,13 +29,13 @@ const Header = styled.header`
 
 function App() {
   const title = 'Opening hours';
-
   return (
     <Container>
       <Header>
         <AccessTimeIcon />
         <Title>{title}</Title>
       </Header>
+      <HoursList />
     </Container>
   );
 }
