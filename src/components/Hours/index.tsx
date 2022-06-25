@@ -3,6 +3,7 @@ import tranformHours, { DayOfWeek } from 'utils/transformHours';
 import isToday from 'utils/isToday';
 import payload from 'utils/payload';
 
+import DisplayTime from './DisplayTime';
 import {
   Container,
   DaysList,
@@ -12,7 +13,6 @@ import {
   Closed,
   Today,
 } from './styled';
-import DisplayTime from './DisplayTime';
 
 export default function Hours() {
   const hoursPayload = tranformHours(payload);

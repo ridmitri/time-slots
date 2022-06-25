@@ -47,26 +47,10 @@ export const Today = styled.div`
   margin-left: ${(props) => props.theme.space.s};
 `;
 
-const spaceSymbol = css`
-  content: '-';
-  visibility: hidden;
-  display: inline-block;
-`;
-
-export const Dash = styled.span`
-  &::before,
+export const Space = styled.span`
   &::after {
-    ${spaceSymbol}
-  }
-`;
-
-export const Value = styled.span`
-  &::after {
-    ${spaceSymbol};
-  }
-`;
-export const Separator = styled.span`
-  &::after {
-    ${spaceSymbol};
+    display: inline-block;
+    content: '-';
+    visibility: hidden;
   }
 `;
