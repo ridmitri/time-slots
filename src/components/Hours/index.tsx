@@ -9,9 +9,10 @@ import {
   DayItem,
   Day,
   HoursList,
-  HoursItem,
   Closed,
+  Today,
 } from './styled';
+import DisplayTime from './DisplayTime';
 
 export default function Hours() {
   const hoursPayload = tranformHours(payload);
@@ -24,20 +25,19 @@ export default function Hours() {
           return (
             <DayItem key={uuid()}>
               <Day>
-                {day} {isToday(dayOfWeek) ? 'TODAY' : null}
+                {day} {isToday(dayOfWeek) ? <Today>Today</Today> : null}
               </Day>
               {hours === null ? (
                 <Closed>Closed</Closed>
               ) : (
                 <HoursList>
                   {hours?.map((item, i) => (
-                    <HoursItem key={uuid()}>
-                      <>
-                        {i % 2 ? '-' : null} {item.hour}
-                        {item.beforeNoon ? ' AM ' : ' PM '}
-                        {i && i < hours.length - 1 && i % 2 ? ', ' : null}
-                      </>
-                    </HoursItem>
+                    <DisplayTime
+                      key={uuid()}
+                      listLength={hours.length}
+                      hoursItem={item}
+                      index={i}
+                    />
                   ))}
                 </HoursList>
               )}

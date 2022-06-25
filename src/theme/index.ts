@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 
 const theme = {
   fontSize: {
-    s: '12px',
+    s: '13px',
     m: '15px',
     l: '17px',
     xl: '26px',
