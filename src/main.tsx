@@ -6,10 +6,10 @@ import '@fontsource/roboto/700.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ThemeProvider } from 'styled-components';
-import GlobalStyle from './components/theme/GlobalStyle';
-import theme from './components/theme';
-
-import App from './App';
+import GlobalStyle from 'theme/GlobalStyle';
+import theme from 'theme';
+import Layout from 'components/Layout';
+import Hours from 'components/Hours';
 
 const root = document.getElementById('root') as HTMLElement;
 
@@ -17,7 +17,9 @@ ReactDOM.createRoot(root).render(
   <React.StrictMode>
     <GlobalStyle />
     <ThemeProvider theme={theme}>
-      <App />
+      <Layout>
+        <Hours />
+      </Layout>
     </ThemeProvider>
   </React.StrictMode>,
 );

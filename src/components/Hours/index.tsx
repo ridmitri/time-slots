@@ -1,35 +1,35 @@
 import uuid from 'utils/uuid';
 import tranformHours, { DayOfWeek } from 'utils/transformHours';
 import isToday from 'utils/isToday';
+import payload from 'utils/payload';
 
 import {
   Container,
-  List,
-  ListItem,
+  DaysList,
+  DayItem,
   Day,
-  Hours,
+  HoursList,
   HoursItem,
   Closed,
 } from './styled';
-import payload from './payload';
 
-export default function HoursList() {
+export default function Hours() {
   const hoursPayload = tranformHours(payload);
 
   return (
     <Container>
-      <List>
+      <DaysList>
         {Object.entries(hoursPayload).map(([day, hours]) => {
           const dayOfWeek = day as DayOfWeek;
           return (
-            <ListItem key={uuid()}>
+            <DayItem key={uuid()}>
               <Day>
                 {day} {isToday(dayOfWeek) ? 'TODAY' : null}
               </Day>
               {hours === null ? (
                 <Closed>Closed</Closed>
               ) : (
-                <Hours>
+                <HoursList>
                   {hours?.map((item, i) => (
                     <HoursItem key={uuid()}>
                       <>
@@ -39,12 +39,12 @@ export default function HoursList() {
                       </>
                     </HoursItem>
                   ))}
-                </Hours>
+                </HoursList>
               )}
-            </ListItem>
+            </DayItem>
           );
         })}
-      </List>
+      </DaysList>
     </Container>
   );
 }

@@ -25,6 +25,7 @@ export default defineConfig(() => {
     resolve: {
       alias: {
         utils: path.resolve(__dirname, './src/utils'),
+        theme: path.resolve(__dirname, './src/theme'),
         components: path.resolve(__dirname, './src/components'),
       },
     },

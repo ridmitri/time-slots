@@ -3,17 +3,24 @@ import { css } from 'styled-components';
 const theme = {
   fontSize: {
     s: '12px',
-    m: '16px',
-    l: '22px',
-    xl: '30px',
+    m: '15px',
+    l: '17px',
+    xl: '26px',
   },
   color: {
-    white: '#fff',
-    black: '#202125',
+    bg: '#fff',
+    fg: '#202125',
     green: '#5bcb02',
-    gray_1: '#f8f8f8',
-    gray_2: '#eee',
-    gray_3: '#a1a2a4',
+    fg_1: '#f8f8f8',
+    fg_2: '#eee',
+    fg_3: '#a1a2a4',
+  },
+  space: {
+    xs: '10px',
+    s: '12px',
+    m: '15px',
+    l: '20px',
+    xl: '30px',
   },
 };
 
@@ -45,15 +52,25 @@ export default theme;
 declare module 'styled-components' {
   export interface DefaultTheme {
     fontSize: {
-      [key: string]: string;
+      s: string;
+      m: string;
+      l: string;
+      xl: string;
     };
     color: {
-      white: string;
-      black: string;
+      fg: string;
+      bg: string;
       green: string;
-      gray_1: string;
-      gray_2: string;
-      gray_3: string;
+      fg_1: string;
+      fg_2: string;
+      fg_3: string;
+    };
+    space: {
+      xs: string;
+      s: string;
+      m: string;
+      l: string;
+      xl: string;
     };
   }
 }
