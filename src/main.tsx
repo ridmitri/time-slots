@@ -6,9 +6,8 @@ import '@fontsource/roboto/700.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { ThemeProvider } from 'styled-components';
 import GlobalStyle from 'theme/GlobalStyle';
-import theme from 'theme';
+import ThemeProvider from 'theme/Provider';
 import Layout from 'components/Layout';
 import Hours from 'components/Hours';
 
@@ -22,7 +21,7 @@ ReactDOM.createRoot(root).render(
   <React.StrictMode>
     <GlobalStyle />
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider>
         <Layout>
           <Hours />
         </Layout>
