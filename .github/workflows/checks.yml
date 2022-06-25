@@ -35,7 +35,7 @@ jobs:
         run: npm ci
 
       - name: Test
-        run: npm test
+        run: npm run test:ci
 
       - name: Static test
         run: npm run lint
@@ -44,4 +44,4 @@ jobs:
         run: npx tsc
 
       - name: Build
-        run: npm build
+        run: npm run build
