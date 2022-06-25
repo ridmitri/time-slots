@@ -24,6 +24,18 @@ const theme = {
   },
 };
 
+export const dark = {
+  ...theme,
+  color: {
+    fg: '#d0d1d5',
+    bg: '#202125',
+    green: '#5bcb02',
+    fg_3: '#a8a8a8',
+    fg_2: '#999',
+    fg_1: '#313234',
+  },
+};
+
 const bold = css`
   font-weight: 700;
 `;
