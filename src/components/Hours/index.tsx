@@ -1,6 +1,7 @@
 import { useQuery } from 'react-query';
 import uuid from 'utils/uuid';
-import tranformHours, { DayOfWeek, Payload } from 'utils/transformHours';
+import { DayOfWeek, Payload } from 'types/index';
+import tranformHours from 'utils/transformHours';
 import isToday from 'utils/isToday';
 import Spinner from 'components/Spinner';
 
@@ -21,7 +22,7 @@ export default function Hours() {
   const { isLoading, data } = useQuery<Payload>(queryKey, fetchOpeningHours);
 
   return (
-    <Container loading={isLoading}>
+    <Container status={isLoading ? 'loading' : 'done'}>
       <Spinner loading={isLoading} />
 
       {data && (

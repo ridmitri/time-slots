@@ -1,4 +1,5 @@
-import tranformHours, { Payload, Result } from '../index';
+import { Payload } from 'types/index';
+import tranformHours, { Result } from '../index';
 
 describe('tranformHours', () => {
   const H = 3600; // seconds in 1 hour

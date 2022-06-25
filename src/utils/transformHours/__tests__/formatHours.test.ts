@@ -1,4 +1,5 @@
-import { formatHours, OpeningHours, FormattedHours } from '../index';
+import { OpeningHours } from 'types';
+import { formatHours, FormattedHours } from '../index';
 
 describe('formatHours', () => {
   const H = 3600; // seconds in 1 hour

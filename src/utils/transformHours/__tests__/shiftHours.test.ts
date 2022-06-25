@@ -1,4 +1,5 @@
-import { shiftHours, Payload } from '../index';
+import { Payload } from 'types/index';
+import { shiftHours } from '../index';
 
 describe('shiftHours', () => {
   const H = 3600; // seconds in 1 hour

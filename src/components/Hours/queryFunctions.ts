@@ -9,6 +9,7 @@ export const fetchOpeningHours = async () => {
     throw new Error('Network error');
   }
 
+  // demo spinner
   await sleep(1000);
 
   return response.json();

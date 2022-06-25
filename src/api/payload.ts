@@ -1,4 +1,4 @@
-import { Payload } from 'utils/transformHours';
+import { Payload } from 'types/index';
 
 const H = 3600;
 

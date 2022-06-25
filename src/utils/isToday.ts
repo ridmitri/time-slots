@@ -1,7 +1,7 @@
-import { DAYS, DayOfWeek } from './transformHours';
+import { DAYS, DayOfWeek } from 'types/index';
 
 const TODAY = new Date().getDay();
 
 export default function isToday(dayOfWeek: DayOfWeek) {
-  return DAYS[TODAY - 1] === dayOfWeek;
+  return DAYS[TODAY] === dayOfWeek;
 }

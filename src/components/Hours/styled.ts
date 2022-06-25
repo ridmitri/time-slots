@@ -5,9 +5,9 @@ const flex = css`
   display: flex;
 `;
 
-export const Container = styled.div<{ loading: boolean }>`
-  height: ${(props) => (props.loading ? '300px' : 'auto')};
-  display: ${(props) => (props.loading ? 'flex' : 'block')};
+export const Container = styled.div<{ status: 'loading' | 'done' }>`
+  height: ${(props) => (props.status === 'loading' ? '300px' : 'auto')};
+  display: ${(props) => (props.status === 'loading' ? 'flex' : 'block')};
   align-items: center;
   justify-content: center;
 `;

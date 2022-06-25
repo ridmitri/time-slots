@@ -12,7 +12,7 @@ import theme from 'theme';
 import Layout from 'components/Layout';
 import Hours from 'components/Hours';
 
-import 'api/handlers';
+import 'api/handler';
 
 const root = document.getElementById('root') as HTMLElement;
 

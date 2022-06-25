@@ -1,3 +1,5 @@
+import { DAYS, DayOfWeek, OpeningHours, Payload } from 'types/index';
+
 import getNextElement from '../array/getNextElement';
 
 const SECONDS_IN_HOUR = 3600;
@@ -7,25 +9,6 @@ export const secondsToHours = (seconds: number) => {
   // use math floor to get amount of whole hours
   return Math.floor(hours);
 };
-
-export const DAYS = [
-  'monday',
-  'tuesday',
-  'wednesday',
-  'thursday',
-  'friday',
-  'saturday',
-  'sunday',
-] as const;
-
-export type DayOfWeek = typeof DAYS[number];
-
-export type OpeningHours = {
-  type: 'open' | 'close';
-  value: number;
-};
-
-export type Payload = Record<DayOfWeek, OpeningHours[]>;
 
 export type FormattedHours = {
   hour: number;
