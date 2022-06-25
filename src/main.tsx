@@ -5,21 +5,28 @@ import '@fontsource/roboto/700.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import { ThemeProvider } from 'styled-components';
 import GlobalStyle from 'theme/GlobalStyle';
 import theme from 'theme';
 import Layout from 'components/Layout';
 import Hours from 'components/Hours';
 
+import 'api/handlers';
+
 const root = document.getElementById('root') as HTMLElement;
+
+const queryClient = new QueryClient();
 
 ReactDOM.createRoot(root).render(
   <React.StrictMode>
     <GlobalStyle />
-    <ThemeProvider theme={theme}>
-      <Layout>
-        <Hours />
-      </Layout>
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider theme={theme}>
+        <Layout>
+          <Hours />
+        </Layout>
+      </ThemeProvider>
+    </QueryClientProvider>
   </React.StrictMode>,
 );

@@ -5,7 +5,12 @@ const flex = css`
   display: flex;
 `;
 
-export const Container = styled.div``;
+export const Container = styled.div<{ loading: boolean }>`
+  height: ${(props) => (props.loading ? '300px' : 'auto')};
+  display: ${(props) => (props.loading ? 'flex' : 'block')};
+  align-items: center;
+  justify-content: center;
+`;
 
 export const DaysList = styled.div`
   padding-bottom: ${(props) => props.theme.space.xs};
