@@ -1,7 +1,7 @@
 import { FormattedHours } from 'utils/transformHours';
 import { HoursItem, Space } from './styled';
 
-type Props = {
+export type Props = {
   index: number;
   listLength: number;
   hoursItem: FormattedHours;
@@ -21,7 +21,7 @@ export default function DisplayTime(props: Props) {
       {hour}
       <Space />
       {beforeNoon ? 'AM' : 'PM'}
-      {index && index < listLength - 1 && index % 2 ? (
+      {index < listLength - 1 && index % 2 ? (
         <>
           ,<Space />
         </>
