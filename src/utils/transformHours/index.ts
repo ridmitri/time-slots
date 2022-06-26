@@ -39,7 +39,7 @@ export const shiftHours = (payload: Payload) => {
 export const formatHours = (
   openingHours: OpeningHours[],
 ): FormattedHours[] | null => {
-  if (!openingHours.length) {
+  if (!openingHours?.length) {
     return null;
   }
 
@@ -61,7 +61,7 @@ export default function tranformHours(payload: Payload): Result {
   const shiftedPayload = shiftHours(payload);
 
   Array.from(DAYS).forEach((dayOfWeek) => {
-    const todayHours = shiftedPayload[dayOfWeek] || ([] as FormattedHours[]);
+    const todayHours = shiftedPayload[dayOfWeek];
     result[dayOfWeek] = formatHours(todayHours);
   });
 

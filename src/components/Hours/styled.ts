@@ -34,6 +34,8 @@ export const Day = styled.div`
 
 export const HoursList = styled.div`
   ${flex}
+  flex-wrap: wrap;
+  margin-left: ${(props) => props.theme.space.s};
 `;
 
 export const HoursItem = styled.div`
