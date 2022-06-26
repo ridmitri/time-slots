@@ -1,5 +1,5 @@
 import React from 'react';
-import theme from 'theme';
+import { useTheme } from 'styled-components';
 import AccessTimeIcon from 'components/Icon/AccessTime';
 import { Container, Title, Header, Content, Wrapper } from './styled';
 
@@ -9,6 +9,7 @@ type Props = {
 
 export default function Layout(props: Props) {
   const { children } = props;
+  const theme = useTheme();
 
   return (
     <Container>

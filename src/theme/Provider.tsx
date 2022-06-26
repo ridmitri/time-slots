@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import theme, { dark } from 'theme';
+import { primary, secondary } from 'theme';
 import Switcher from 'components/Switcher';
 
 type Props = {
@@ -9,12 +9,14 @@ type Props = {
 
 export default function Provider(props: Props) {
   const { children } = props;
-  const [light, setLight] = useState(true);
+  const [isPrimary, setTheme] = useState(true);
 
   return (
     <>
-      <Switcher onClick={() => setLight(!light)} light={light} />
-      <ThemeProvider theme={light ? theme : dark}>{children}</ThemeProvider>
+      <Switcher onClick={() => setTheme(!isPrimary)} primary={isPrimary} />
+      <ThemeProvider theme={isPrimary ? primary : secondary}>
+        {children}
+      </ThemeProvider>
     </>
   );
 }

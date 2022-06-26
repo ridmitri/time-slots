@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-const theme = {
+export const primary = {
   fontSize: {
     s: '13px',
     m: '15px',
@@ -24,8 +24,8 @@ const theme = {
   },
 };
 
-export const dark = {
-  ...theme,
+export const secondary = {
+  ...primary,
   color: {
     fg: '#d0d1d5',
     bg: '#202125',
@@ -58,8 +58,6 @@ export const font = {
   medium,
   light,
 };
-
-export default theme;
 
 declare module 'styled-components' {
   export interface DefaultTheme {

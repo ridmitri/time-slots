@@ -4,12 +4,12 @@ import { Button } from './styled';
 
 export type Props = {
   onClick: () => void;
-  light: boolean;
+  primary: boolean;
 };
 
 export default function Switcher(props: Props) {
-  const { light, onClick } = props;
+  const { primary, onClick } = props;
   return (
-    <Button onClick={onClick}>{light ? <Brightness5 /> : <BedTime />}</Button>
+    <Button onClick={onClick}>{primary ? <Brightness5 /> : <BedTime />}</Button>
   );
 }
