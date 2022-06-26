@@ -60,10 +60,10 @@ export default function tranformHours(payload: Payload): Result {
 
   const shiftedPayload = shiftHours(payload);
 
-  Object.entries(shiftedPayload).forEach(([dayOfWeek, todayHours]) => {
-    const day = dayOfWeek as keyof Payload;
-
-    result[day] = formatHours(todayHours);
+  Array.from(DAYS).forEach((dayOfWeek) => {
+    const todayHours = shiftedPayload[dayOfWeek] || ([] as FormattedHours[]);
+    result[dayOfWeek] = formatHours(todayHours);
   });
+
   return result;
 }
