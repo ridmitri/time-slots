@@ -30,6 +30,19 @@
     }
   },
   "rules": {
-    "@typescript-eslint/no-unused-vars": ["error"]
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        // keep testing library in devDependencies
+        "devDependencies": [
+          "src/setupTests.ts",
+          "**/*.spec.ts",
+          "**/*.test.ts",
+          "**/*.spec.tsx",
+          "**/*.test.tsx"
+        ]
+      }
+    ]
   }
 }

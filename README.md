@@ -1,5 +1,9 @@
 # Opening hours frontend assignment
 
+## Production build
+
+For demo purposes the build is included in delivery. The files are located in the `./dist` folder. Static http server is required to open the app in a browser.
+
 ## Installation
 
 `npm install`
@@ -63,10 +67,10 @@ Opening hours payload gets loaded from the mocked endpoint. The data processing 
 
 The logic of each step is described in detail in its test specs:
 
-- `utils/transformHours/**test**/`
+- `utils/transformHours/__test__/`
 - `components/Hours/DisplayTime.test.tsx`
 
-The initial payload can not be used as data source directly as it’s a key-value object. By definition objects is an unordered collection of properties, hence there is a chance to display days of the week in wrong order.
+The initial payload can not be used as a data source directly as it’s a key-value object. By definition objects are an unordered collection of properties, hence there is a chance to display days of the week in wrong order.
 
 ### UI Features
 
@@ -74,4 +78,4 @@ The initial payload can not be used as data source directly as it’s a key-valu
 - Centered Layout utilizing flexbox
 - Highlighted current day of the week
 - Global theme config
-- BONUS: Dark & Light theme switcher
+- BONUS: Dark & Light theme switcher in the top right corner

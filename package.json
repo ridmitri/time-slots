@@ -9,6 +9,7 @@
     "prepare": "",
     "test": "vitest src",
     "test:ci": "vitest run src",
+    "test:coverage": "vitest run --coverage src",
     "lint": "eslint --ext .jsx,.js,.tsx,.ts src"
   },
   "dependencies": {
