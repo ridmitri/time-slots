@@ -73,5 +73,5 @@ The initial payload can not be used as data source directly as it’s a key-valu
 - Loading spinner for data request
 - Centered Layout utilizing flexbox
 - Highlighted current day of the week
-- Dark/Light theme switcher
 - Global theme config
+- BONUS: Dark & Light theme switcher

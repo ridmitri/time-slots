@@ -22,7 +22,7 @@ export default function Hours() {
   const { isLoading, data } = useQuery<Payload>(queryKey, fetchOpeningHours);
 
   return (
-    <Container status={isLoading ? 'loading' : 'done'}>
+    <Container>
       <Spinner loading={isLoading} />
 
       {data && (
