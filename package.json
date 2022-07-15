@@ -16,7 +16,7 @@
     "@fontsource/roboto": "^4.5.7",
     "@mui/icons-material": "^5.8.4",
     "babel-plugin-styled-components": "^2.0.7",
-    "msw": "0.43.1",
+    "msw": "0.44.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-query": "^3.39.1",
