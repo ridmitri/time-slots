@@ -46,7 +46,7 @@
     "jsdom": "20.0.1",
     "lint-staged": "^13.0.1",
     "prettier": "2.7.1",
-    "vitest": "0.24.0",
+    "vitest": "0.24.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0"
   },
