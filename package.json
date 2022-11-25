@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@fontsource/roboto": "4.5.8",
-    "@mui/icons-material": "5.10.14",
+    "@mui/icons-material": "5.10.15",
     "babel-plugin-styled-components": "^2.0.7",
     "msw": "0.48.3",
     "react": "^18.0.0",
