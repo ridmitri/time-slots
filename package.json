@@ -15,7 +15,7 @@
   "dependencies": {
     "@fontsource/roboto": "4.5.8",
     "@mui/icons-material": "5.11.9",
-    "babel-plugin-styled-components": "^2.0.7",
+    "babel-plugin-styled-components": "2.0.7",
     "msw": "0.49.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
