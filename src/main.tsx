@@ -30,8 +30,6 @@ function main() {
   );
 }
 
-console.log('import.meta.env.VITE_MSW', import.meta.env.VITE_MSW)
-
 if (import.meta.env.VITE_MSW) {
   console.log('Run mocks');
   import('api/handler').then(main).catch(() => {

@@ -69,7 +69,7 @@ jobs:
         run: npm list
 
       - name: Install dependencies
-        run: npm set-script prepare "" && npm ci --only=production
+        run: npm pkg set scripts.prepare="" && npm ci --only=production
 
       - name: Build
         run: npm run build
