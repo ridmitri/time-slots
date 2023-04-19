@@ -5,9 +5,10 @@ const flex = css`
   display: flex;
 `;
 
-export const Container = styled.div`
+export const Container = styled.div<{ isLoading: boolean }>`
   ${flex};
-  align-items: top;
+  align-items: ${(props) => (props.isLoading ? 'center' : 'top')};
+  justify-content: center;
   min-height: 240px;
   min-width: 300px;
 `;
