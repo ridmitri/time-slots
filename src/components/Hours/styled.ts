@@ -8,6 +8,8 @@ const flex = css`
 export const Container = styled.div`
   ${flex};
   align-items: top;
+  min-height: 240px;
+  min-width: 300px;
 `;
 
 export const DaysList = styled.div`

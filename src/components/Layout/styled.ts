@@ -27,6 +27,12 @@ export const Title = styled.h1`
   margin-left: ${(props) => props.theme.space.xs};
 `;
 
+export const Small = styled.span`
+  ${font.regular}
+  font-size: ${(props) => props.theme.fontSize.m};
+  margin-left: ${(props) => props.theme.space.xs};
+`;
+
 export const Header = styled.header`
   display: flex;
   text-align: left;
