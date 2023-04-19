@@ -15,6 +15,9 @@ export const primary = {
     fg_2: '#eee',
     fg_3: '#a1a2a4',
   },
+  shadow: `0 4px 5px 0 rgba(100, 100, 100, 0.14),
+    0 1px 10px 0 rgba(100, 100, 100, 0.12),
+    0 2px 4px -1px rgba(100, 100, 100, 0.2)`,
   space: {
     xs: '10px',
     s: '12px',
@@ -26,6 +29,7 @@ export const primary = {
 
 export const secondary = {
   ...primary,
+  shadow: 'none',
   color: {
     fg: '#d0d1d5',
     bg: '#202125',
@@ -67,6 +71,7 @@ declare module 'styled-components' {
       l: string;
       xl: string;
     };
+    shadow: string;
     color: {
       fg: string;
       bg: string;

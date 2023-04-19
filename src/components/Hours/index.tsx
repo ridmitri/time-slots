@@ -1,22 +1,11 @@
 import { useQuery } from 'react-query';
-import uuid from 'utils/uuid';
-import { DayOfWeek, Payload } from 'types/index';
-import tranformHours from 'utils/transformHours';
-import isToday from 'utils/isToday';
 import Spinner from 'components/Spinner';
 
+import { Payload } from 'types';
 import { fetchOpeningHours, queryKey } from './queryFunctions';
-
 import DisplayTime from './DisplayTime';
-import {
-  Container,
-  DaysList,
-  DayItem,
-  Day,
-  HoursList,
-  Closed,
-  Today,
-} from './styled';
+
+import { Container, DaysList, DayItem, Day, HoursList, Closed } from './styled';
 
 export default function Hours() {
   const { isLoading, data } = useQuery<Payload>(queryKey, fetchOpeningHours);
@@ -27,30 +16,24 @@ export default function Hours() {
 
       {data && (
         <DaysList>
-          {Object.entries(tranformHours(data)).map(([day, hours]) => {
-            const dayOfWeek = day as DayOfWeek;
-            return (
-              <DayItem key={uuid()}>
-                <Day>
-                  {day} {isToday(dayOfWeek) ? <Today>Today</Today> : null}
-                </Day>
-                {hours === null ? (
-                  <Closed>Closed</Closed>
-                ) : (
-                  <HoursList>
-                    {hours?.map((item, i) => (
-                      <DisplayTime
-                        key={uuid()}
-                        listLength={hours.length}
-                        hoursItem={item}
-                        index={i}
-                      />
-                    ))}
-                  </HoursList>
-                )}
-              </DayItem>
-            );
-          })}
+          {data.map(({ day, slots, key }) => (
+            <DayItem key={key}>
+              <Day>{day}</Day>
+              {slots.length === 0 ? (
+                <Closed>-</Closed>
+              ) : (
+                <HoursList>
+                  {slots?.map((item, i) => (
+                    <DisplayTime
+                      key={item.key}
+                      slotItem={item.slot}
+                      index={i}
+                    />
+                  ))}
+                </HoursList>
+              )}
+            </DayItem>
+          ))}
         </DaysList>
       )}
     </Container>

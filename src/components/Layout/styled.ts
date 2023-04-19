@@ -18,15 +18,13 @@ export const Wrapper = styled.div`
   border-radius: ${(props) => props.theme.space.xs};
 
   /* Shadow 4dp */
-  box-shadow: 0 4px 5px 0 rgba(100, 100, 100, 0.14),
-    0 1px 10px 0 rgba(100, 100, 100, 0.12),
-    0 2px 4px -1px rgba(100, 100, 100, 0.2);
+  box-shadow: ${(props) => props.theme.shadow};
 `;
 
 export const Title = styled.h1`
   ${font.bold}
   font-size: ${(props) => props.theme.fontSize.xl};
-  margin-left: ${(props) => props.theme.space.xs}; ;
+  margin-left: ${(props) => props.theme.space.xs};
 `;
 
 export const Header = styled.header`

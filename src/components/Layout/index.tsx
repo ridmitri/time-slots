@@ -16,7 +16,7 @@ export default function Layout(props: Props) {
       <Wrapper>
         <Header>
           <AccessTimeIcon fill={theme.color.fg_3} />
-          <Title>Opening hours</Title>
+          <Title>Time slots</Title>
         </Header>
         <Content>{children}</Content>
       </Wrapper>

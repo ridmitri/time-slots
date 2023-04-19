@@ -1,5 +1,5 @@
 {
   "*.{js,json,ts,tsx,less,md}": ["prettier --write"],
   "*.{ts,tsx}": "bash -c tsc --noEmit",
-  "*.{js,ts,tsx}": ["eslint --fix"]
+  "*.{js,ts,tsx}": ["npx rome check . --apply"]
 }

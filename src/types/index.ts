@@ -1,18 +1,10 @@
-export const DAYS = [
-  'monday',
-  'tuesday',
-  'wednesday',
-  'thursday',
-  'friday',
-  'saturday',
-  'sunday',
-] as const;
-
-export type DayOfWeek = typeof DAYS[number];
-
-export type OpeningHours = {
-  type: 'open' | 'close';
-  value: number;
+export type Slots = {
+  day: string;
+  slots: Array<{
+    slot: string;
+    key: string;
+  }>;
+  key: string;
 };
 
-export type Payload = Record<DayOfWeek, OpeningHours[]>;
+export type Payload = Slots[];
