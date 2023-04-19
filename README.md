@@ -1,8 +1,6 @@
-# Opening hours frontend assignment
+# Time slots micro app
 
-## Production build
-
-For demo purposes the build is included in delivery. The files are located in the `./dist` folder. Static http server is required to open the app in a browser.
+The app fetches CSV from a public spreadsheet and renders available time slots.
 
 ## Installation
 
@@ -34,7 +32,7 @@ For demo purposes the build is included in delivery. The files are located in th
 
 Editorconfig assures standardized file formatting across different code editors.
 
-Github workflow `checks.yml` runs quality checks and tests the build on every push. The workflow is optimized by caching `node_modules` and canceling previous runs on opening a new PR.
+Github workflow `checks.yml` runs quality checks and tests the build on every push.
 
 ### Builder
 
@@ -48,8 +46,6 @@ Github workflow `checks.yml` runs quality checks and tests the build on every pu
 
 [Vitest](https://vitest.dev/) is a replacement for [Jest](https://jestjs.io/) for projects based on Vite. Migration from Jest to Vitest is seamless as the Vitest API is [compatible with Jest](https://vitest.dev/guide/migration.html#migrating-from-jest).
 
-[React-testing library](https://testing-library.com/docs/react-testing-library/intro/) provides integration testing tooling for React components.
-
 ### Data fetching
 
 Even though it may seem like an overkill for the task I decided to demonstrate my general approach for data fetching and advanced tooling for API emulation in browsers.
@@ -58,24 +54,4 @@ Even though it may seem like an overkill for the task I decided to demonstrate m
 
 [React-query](https://react-query.tanstack.com/) is a library for managing server state, it uses the stale-while-revalidate caching strategy and replaces general purpose state management libraries like [Redux](https://redux.js.org/).
 
-### Implementation Logic
 
-Opening hours payload gets loaded from the mocked endpoint. The data processing is divided on 2 steps for easier testing:
-
-1. Translate the payload to a list of days with opening hours according to business requirements.
-2. Display the list of days according to UI mockups.
-
-The logic of each step is described in detail in its test specs:
-
-- `utils/transformHours/__test__/`
-- `components/Hours/DisplayTime.test.tsx`
-
-The initial payload can not be used as a data source directly as it’s a key-value object. By definition objects are an unordered collection of properties, hence there is a chance to display days of the week in wrong order.
-
-### UI Features
-
-- Loading spinner for data request
-- Centered Layout utilizing flexbox
-- Highlighted current day of the week
-- Global theme config
-- BONUS: Dark & Light theme switcher in the top right corner

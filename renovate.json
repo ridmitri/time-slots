@@ -1,21 +1,55 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:js-app",
-    "group:definitelyTyped",
-    "group:jsUnitTest",
-    "group:linters"
+    "config:base"
   ],
-  "timezone": "Europe/Berlin",
-  "schedule": ["after 5:00pm on Friday"],
   "packageRules": [
     {
-      "updateTypes": ["minor", "patch"],
-      "automerge": true
+      "groupName": "main",
+      "matchPackagePatterns": [
+        "typescript",
+        "react",
+        "react-dom",
+        "@types/react-dom",
+        "@types/react"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "labels": [
+        "patch"
+      ],
+      "automerge": true,
+      "schedule": [
+        "on the first day of the month"
+      ]
     },
     {
-      "matchPackagePatterns": ["react", "react-dom"],
-      "groupName": "react"
+      "groupName": "common",
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "excludePackagePatterns": [
+        "typescript",
+        "react",
+        "react-dom",
+        "@types/react-dom",
+        "@types/react"
+      ],
+      "automerge": true,
+      "labels": [
+        "patch"
+      ],
+      "schedule": [
+        "every weekend"
+      ]
     }
-  ]
+  ],
+  "timezone": "Europe/Berlin"
 }
