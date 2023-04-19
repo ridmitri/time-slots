@@ -36,7 +36,3 @@ export const Header = styled.header`
   border-bottom: 2px solid;
   border-bottom-color: ${(props) => props.theme.color.fg};
 `;
-
-export const Content = styled.div`
-  width: 300px;
-`;

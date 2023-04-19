@@ -11,21 +11,33 @@ import ThemeProvider from 'theme/Provider';
 import Layout from 'components/Layout';
 import Hours from 'components/Hours';
 
-import 'api/handler';
-
 const root = document.getElementById('root') as HTMLElement;
 
 const queryClient = new QueryClient();
 
-ReactDOM.createRoot(root).render(
-  <React.StrictMode>
-    <GlobalStyle />
-    <QueryClientProvider client={queryClient}>
-      <ThemeProvider>
-        <Layout>
-          <Hours />
-        </Layout>
-      </ThemeProvider>
-    </QueryClientProvider>
-  </React.StrictMode>,
-);
+function main() {
+  ReactDOM.createRoot(root).render(
+    <React.StrictMode>
+      <GlobalStyle />
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider>
+          <Layout>
+            <Hours />
+          </Layout>
+        </ThemeProvider>
+      </QueryClientProvider>
+    </React.StrictMode>,
+  );
+}
+
+console.log('import.meta.env.VITE_MSW', import.meta.env.VITE_MSW)
+
+if (import.meta.env.VITE_MSW) {
+  console.log('Run mocks');
+  import('api/handler').then(main).catch(() => {
+    console.error('MSW in not loading');
+  });
+} else {
+  console.log('Run Remote API');
+  main();
+}

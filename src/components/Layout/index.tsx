@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTheme } from 'styled-components';
 import AccessTimeIcon from 'components/Icon/AccessTime';
-import { Container, Title, Header, Content, Wrapper } from './styled';
+import { Container, Title, Header, Wrapper } from './styled';
 
 type Props = {
   children: React.ReactNode;
@@ -18,7 +18,7 @@ export default function Layout(props: Props) {
           <AccessTimeIcon fill={theme.color.fg_3} />
           <Title>Time slots</Title>
         </Header>
-        <Content>{children}</Content>
+        {children}
       </Wrapper>
     </Container>
   );

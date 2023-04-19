@@ -6,14 +6,13 @@ const flex = css`
 `;
 
 export const Container = styled.div`
-  min-height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  ${flex};
+  align-items: top;
 `;
 
 export const DaysList = styled.div`
-  padding-bottom: ${(props) => props.theme.space.xs};
+  padding: ${(props) => props.theme.space.xs} 0;
+  width: 300px;
 `;
 
 export const DayItem = styled.div`
