@@ -3,9 +3,17 @@ import Spinner from 'components/Spinner';
 
 import { Payload } from 'types';
 import { fetchOpeningHours, queryKey } from './queryFunctions';
-import DisplayTime from './DisplayTime';
 
-import { Container, DaysList, DayItem, Day, HoursList, Closed } from './styled';
+import {
+  Container,
+  DaysList,
+  DayItem,
+  Day,
+  SlotList,
+  Closed,
+  Space,
+  SlotItem,
+} from './styled';
 
 export default function Hours() {
   const { isLoading, data } = useQuery<Payload>(queryKey, fetchOpeningHours);
@@ -22,15 +30,14 @@ export default function Hours() {
               {slots.length === 0 ? (
                 <Closed>-</Closed>
               ) : (
-                <HoursList>
+                <SlotList>
                   {slots?.map((item, i) => (
-                    <DisplayTime
-                      key={item.key}
-                      slotItem={item.slot}
-                      index={i}
-                    />
+                    <SlotItem key={item.key}>
+                      {i % 2 ? <Space>,</Space> : null}
+                      {item.slot}
+                    </SlotItem>
                   ))}
-                </HoursList>
+                </SlotList>
               )}
             </DayItem>
           ))}

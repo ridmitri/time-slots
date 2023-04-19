@@ -1,7 +1,7 @@
 import uuid from 'utils/uuid';
 import { Payload } from 'types';
 
-export default function transformPayload(payload: string): Payload {
+export default function transformPayload(payload?: string): Payload {
   if (!payload) {
     return [] as Payload;
   }

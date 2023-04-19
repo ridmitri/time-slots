@@ -33,13 +33,13 @@ export const Day = styled.div`
   align-items: center;
 `;
 
-export const HoursList = styled.div`
+export const SlotList = styled.div`
   ${flex}
   flex-wrap: wrap;
   margin-left: ${(props) => props.theme.space.s};
 `;
 
-export const HoursItem = styled.div`
+export const SlotItem = styled.div`
   ${flex}
 `;
 

@@ -43,12 +43,9 @@
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
     "husky": "8.0.3",
-    "jsdom": "20.0.3",
     "lint-staged": "13.1.1",
     "prettier": "2.8.4",
-    "vitest": "0.28.4",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0"
+    "vitest": "0.28.4"
   },
   "msw": {
     "workerDirectory": "public"
