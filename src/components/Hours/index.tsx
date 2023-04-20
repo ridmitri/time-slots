@@ -16,7 +16,11 @@ import {
 } from './styled';
 
 export default function Hours() {
-  const { isLoading, data } = useQuery<Payload>(queryKey, fetchOpeningHours);
+  const { isLoading, data } = useQuery<Payload>({
+    queryKey,
+    queryFn: fetchOpeningHours,
+    refetchInterval: 1000 * 60,
+  });
 
   return (
     <Container isLoading={isLoading}>
