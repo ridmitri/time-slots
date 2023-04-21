@@ -23,14 +23,13 @@ export const DayItem = styled.div`
   justify-content: space-between;
   padding: ${(props) => props.theme.space.xs} 0;
   padding-right: 3px;
-  font-size: ${(props) => props.theme.fontSize.l};
   border-bottom: 1px solid ${(props) => props.theme.color.fg_2};
 `;
 
 export const Day = styled.div`
   ${flex}
-  ${font.medium}
-  text-transform: capitalize;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
   align-items: center;
 `;
 
