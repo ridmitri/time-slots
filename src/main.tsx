@@ -6,7 +6,7 @@ import '@fontsource/roboto-mono';
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import GlobalStyle from 'theme/GlobalStyle';
 import ThemeProvider from 'theme/Provider';
 import Layout from 'components/Layout';
