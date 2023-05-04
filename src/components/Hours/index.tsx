@@ -1,4 +1,4 @@
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 import Spinner from 'components/Spinner';
 
 import { Payload } from 'types';
@@ -17,7 +17,7 @@ import {
 
 export default function Hours() {
   const { isLoading, data } = useQuery<Payload>({
-    queryKey,
+    queryKey: [queryKey],
     queryFn: fetchOpeningHours,
     refetchInterval: 1000 * 60,
   });
