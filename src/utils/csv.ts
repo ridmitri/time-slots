@@ -14,16 +14,18 @@ export default function transformPayload(payload?: string): Payload {
   for (let i = 1; i < header.length; i += 1) {
     const day = header[i];
     const slots = slotsData.map((slotRow) => slotRow.split(',')[i]);
-    result.push({
-      day,
-      slots: slots
-        .filter((item) => item.trim() !== '-')
-        .map((slot) => ({
-          slot,
-          key: uuid(),
-        })),
-      key: uuid(),
-    });
+    if (day.length) {
+      result.push({
+        day,
+        slots: slots
+          .filter((item) => item.trim() !== '-')
+          .map((slot) => ({
+            slot,
+            key: uuid(),
+          })),
+        key: uuid(),
+      });
+    }
   }
 
   return result;

@@ -46,4 +46,22 @@ describe('transformPayload', () => {
 
     expect(transformPayload(payload)).toEqual(expectedOutput);
   });
+  it('should omit cells from csv', () => {
+    const payload = `name,,Tuesday\nslot1,9:00-10:00,-\nslot2,-,10:00-11:00`;
+
+    const expectedOutput = [
+      {
+        day: 'Tuesday',
+        slots: [
+          {
+            slot: '10:00-11:00',
+            key: 'key',
+          },
+        ],
+        key: 'key',
+      },
+    ];
+
+    expect(transformPayload(payload)).toEqual(expectedOutput);
+  });
 });
