@@ -13,13 +13,13 @@
     "lint": "eslint --ext .jsx,.js,.tsx,.ts src"
   },
   "dependencies": {
-    "@fontsource/roboto": "5.0.2",
+    "@fontsource/roboto": "5.0.3",
     "@fontsource/roboto-mono": "^5.0.0",
     "@mui/icons-material": "5.11.16",
     "@vitejs/plugin-react": "^4.0.0",
     "babel-plugin-styled-components": "^2.0.7",
     "install": "^0.13.0",
-    "msw": "1.2.1",
+    "msw": "1.2.2",
     "npm": "^9.6.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -48,7 +48,7 @@
     "husky": "8.0.3",
     "lint-staged": "13.2.2",
     "prettier": "2.8.8",
-    "vitest": "0.31.4"
+    "vitest": "0.32.0"
   },
   "msw": {
     "workerDirectory": "public"
