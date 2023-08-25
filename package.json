@@ -15,11 +15,11 @@
   "dependencies": {
     "@fontsource/roboto": "5.0.8",
     "@fontsource/roboto-mono": "^5.0.0",
-    "@mui/icons-material": "5.14.3",
+    "@mui/icons-material": "5.14.6",
     "@vitejs/plugin-react": "^4.0.0",
     "babel-plugin-styled-components": "^2.0.7",
     "install": "^0.13.0",
-    "msw": "1.2.3",
+    "msw": "1.2.4",
     "npm": "^9.6.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -36,7 +36,7 @@
     "@typescript-eslint/eslint-plugin": "6.2.1",
     "@typescript-eslint/parser": "6.2.1",
     "c8": "8.0.1",
-    "eslint": "8.47.0",
+    "eslint": "8.48.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-airbnb-typescript": "17.1.0",
     "eslint-config-prettier": "9.0.0",
@@ -46,9 +46,9 @@
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
     "husky": "8.0.3",
-    "lint-staged": "14.0.0",
+    "lint-staged": "14.0.1",
     "prettier": "3.0.2",
-    "vitest": "0.34.2"
+    "vitest": "0.34.3"
   },
   "msw": {
     "workerDirectory": "public"
