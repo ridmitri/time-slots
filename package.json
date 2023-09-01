@@ -15,11 +15,11 @@
   "dependencies": {
     "@fontsource/roboto": "5.0.8",
     "@fontsource/roboto-mono": "^5.0.0",
-    "@mui/icons-material": "5.14.6",
+    "@mui/icons-material": "5.14.7",
     "@vitejs/plugin-react": "^4.0.0",
     "babel-plugin-styled-components": "^2.0.7",
     "install": "^0.13.0",
-    "msw": "1.2.4",
+    "msw": "1.2.5",
     "npm": "^9.6.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -47,7 +47,7 @@
     "eslint-plugin-react-hooks": "^4.5.0",
     "husky": "8.0.3",
     "lint-staged": "14.0.1",
-    "prettier": "3.0.2",
+    "prettier": "3.0.3",
     "vitest": "0.34.3"
   },
   "msw": {
