@@ -20,7 +20,7 @@
     "babel-plugin-styled-components": "^2.0.7",
     "install": "^0.13.0",
     "msw": "1.2.5",
-    "npm": "^9.6.5",
+    "npm": "^10.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "@tanstack/react-query": "^4.0.5",
