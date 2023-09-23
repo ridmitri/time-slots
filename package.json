@@ -36,7 +36,7 @@
     "@typescript-eslint/eslint-plugin": "6.5.0",
     "@typescript-eslint/parser": "6.5.0",
     "c8": "8.0.1",
-    "eslint": "8.49.0",
+    "eslint": "8.50.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-airbnb-typescript": "17.1.0",
     "eslint-config-prettier": "9.0.0",
@@ -48,7 +48,7 @@
     "husky": "8.0.3",
     "lint-staged": "14.0.1",
     "prettier": "3.0.3",
-    "vitest": "0.34.4"
+    "vitest": "0.34.5"
   },
   "msw": {
     "workerDirectory": "public"
