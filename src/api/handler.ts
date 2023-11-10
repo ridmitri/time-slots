@@ -1,11 +1,13 @@
-import { setupWorker, rest } from 'msw';
+import { http, HttpResponse } from 'msw';
+import { setupWorker } from 'msw/browser'
 
 const worker = setupWorker(
-  rest.get<string>('/time-slots', (req, res, ctx) => {
+  http.get('/time-slots', () => {
     const payload = `Date,Mon 17,Tue 18,Wed 19,Thu 20,Fri 21
-Slot,-,-,10:00 - 12:30,-,9:30 - 10:15
-Slot,-,13:30 - 16:30,-,-,-`;
-    return res(ctx.text(payload));
+    Slot,-,-,10:00 - 12:30,-,9:30 - 10:15
+    Slot,-,13:30 - 16:30,-,-,-`;
+
+    return HttpResponse.json(payload)
   }),
 );
 
