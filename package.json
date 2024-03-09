@@ -13,9 +13,9 @@
     "lint": "eslint --ext .jsx,.js,.tsx,.ts src"
   },
   "dependencies": {
-    "@fontsource/roboto": "5.0.8",
+    "@fontsource/roboto": "5.0.12",
     "@fontsource/roboto-mono": "^5.0.0",
-    "@mui/icons-material": "5.15.11",
+    "@mui/icons-material": "5.15.12",
     "@vitejs/plugin-react": "^4.0.0",
     "babel-plugin-styled-components": "^2.0.7",
     "install": "^0.13.0",
