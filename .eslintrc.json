@@ -6,10 +6,6 @@
   },
   "parser": "@typescript-eslint/parser",
   "extends": [
-    // Base config. Includes rules for react.
-    "airbnb",
-    // Enhances Airbnb's ESLint config with TypeScript support.
-    "airbnb-typescript",
     // Turns off rules that required React import in JSX files. https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#removing-unused-react-imports
     "plugin:react/jsx-runtime",
     // Enforces best practices for TS.
@@ -17,12 +13,10 @@
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     // This ESLint plugin enforces the Rules of Hooks. https://reactjs.org/docs/hooks-rules.html.
     "plugin:react-hooks/recommended",
-    // The purpose of this plugin is to apply best practices on directive comments such as /* eslint-disable */.
-    "plugin:eslint-comments/recommended",
     // Turns off all rules that are unnecessary or might conflict with Prettier.
     "prettier"
   ],
-  "plugins": ["@typescript-eslint", "react", "react-hooks", "eslint-comments"],
+  "plugins": ["@typescript-eslint", "react", "react-hooks"],
   "parserOptions": {
     "project": "./tsconfig.json",
     "ecmaFeatures": {
@@ -30,19 +24,6 @@
     }
   },
   "rules": {
-    "@typescript-eslint/no-unused-vars": ["error"],
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        // keep testing library in devDependencies
-        "devDependencies": [
-          "src/setupTests.ts",
-          "**/*.spec.ts",
-          "**/*.test.ts",
-          "**/*.spec.tsx",
-          "**/*.test.tsx"
-        ]
-      }
-    ]
+    "@typescript-eslint/no-unused-vars": ["error"]
   }
 }
