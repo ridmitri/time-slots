@@ -19,7 +19,7 @@
     "@vitejs/plugin-react": "^4.0.0",
     "babel-plugin-styled-components": "^2.0.7",
     "install": "^0.13.0",
-    "msw": "2.12.3",
+    "msw": "2.12.4",
     "npm": "^10.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -44,7 +44,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "husky": "8.0.3",
     "lint-staged": "15.5.2",
-    "prettier": "3.7.3",
+    "prettier": "3.7.4",
     "vitest": "0.34.6"
   },
   "msw": {
